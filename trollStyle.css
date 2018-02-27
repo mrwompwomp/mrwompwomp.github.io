@@ -1,0 +1,13 @@
+pre {
+    user-select: none;
+    transition: color .25s .25s;
+    display: inline-block;
+    color: rgba(0, 0, 0, 0);
+    font-family: monospace;
+    white-space: pre;
+}
+
+pre:hover {
+    transition: color .1s;
+    color: #333;
+}
