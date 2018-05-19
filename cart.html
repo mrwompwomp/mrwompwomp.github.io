@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Cart</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <style>
+        #top {
+            background: linear-gradient(#162c70, #0a1434);
+            color: white;
+        }
+
+        .navbar-brand {
+            margin-top: -15px;
+        }
+
+        footer {
+            background-color: #0a1434;
+            color: white;
+            text-align: center;
+        }
+
+        footer a {
+            text-decoration: none;
+            color: beige;
+        }
+
+        nav {
+            background: linear-gradient(#162c70, #2525a7);
+        }
+
+        p {
+            clear: left;
+        }
+
+        .active {
+            color: #99cfff;
+        }
+
+        .item-name {
+            font-size: 200%;
+        }
+
+        .item-decrement,
+        .item-quantity,
+        .item-increment {
+            display: inline;
+            font-size: 150%;
+        }
+
+        .item-decrement {
+            padding: 10px;
+            font-size: 250%
+        }
+
+        .item-increment {
+            padding: 10px;
+            font-size: 200%
+        }
+
+        .item-decrement a:hover,
+        .item-increment a:hover {
+            text-decoration: none;
+        }
+
+        .itemRow div.item-price::before {
+            content: "Unit price: ";
+        }
+
+        section {
+            text-align: center;
+            margin: auto;
+            padding-bottom: 40px;
+        }
+
+    </style>
+    <link rel="icon" href="Images/Calculatorfavi.png">
+</head>
+
+<body class="container-fluid">
+    <main>
+        <!--<div class="row" id="top">
+            <figure class="col-sm-6 col-md-4">
+                <img src="logo.png" alt="logo">
+            </figure>
+
+            <h1 class="col-sm-6 col-md-8">Cart</h1>
+        </div>-->
+        <nav class="navbar navbar-inverse">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+                    <a class="navbar-brand" href="Index.html"><img src="logo.png" width="50" height="50"></a>
+                </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="Index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Products <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Products.html">Products Overview</a></li>
+
+                                <li class="dropdown-header">Models</li>
+
+                                <li><a href="TI.html#Ti-84 plus CE">Ti-84 plus CE</a></li>
+                                <li><a href="TI.html#Ti-84 plus">Ti-84 plus</a></li>
+                                <li><a href="TI.html#Ti-89 Titanium">Ti-89 Titanium</a></li>
+                                <li><a href="TI.html#Ti-nspire CX CAS">Ti-nspire CX CAS</a></li>
+                                <li><a href="TI.html#Ti-nspire CX">Ti-nspire CX</a></li>
+                                <li><a href="TI.html#Ti-83 plus">Ti-83 plus</a></li>
+                                <li><a href="TI.html#Ti-73 explorer">Ti-73 explorer</a></li>
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tools & Software <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Tools_Software.html">Overview</a></li>
+                                <li class="dropdown-header">Tools & Software</li>
+                                <li><a href="Ti-launchpad.html">Ti-Launchpad</a></li>
+                                <li><a href="Ti-Connect.html">Ti-Connect</a></li>
+                                <li><a href="Ti-Connect_CE.html">Ti-Connect CE</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="about.html"><span class="glyphicon glyphicon-question-sign"></span> About Us</a></li>
+                        <li><a href="cart.html">
+          <span class="glyphicon glyphicon-shopping-cart active"></span> Cart
+        </a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <section>
+            <span class="simpleCart_quantity" id="numItems" style="display: none;"></span>
+            <div class="simpleCart_items"></div>
+            <br> Cart Total: <span class="simpleCart_total"></span><br> Tax Cost: <span class="simpleCart_tax"></span><br> Shipping: <span class="simpleCart_shipping"></span><br>
+            <p>Grand Total: <span class="simpleCart_grandTotal"></span></p>
+            <p><a href="javascript:;" class="simpleCart_empty">Empty Cart</a></p>
+
+            <p><a href="javascript:;" class="simpleCart_checkout"><img src="https://www.paypalobjects.com/webstatic/en_US/i/buttons/checkout-logo-large.png" alt="Check out with PayPal" /></a></p>
+        </section>
+    </main>
+    <footer>
+        Texas Instruments Incorporated. &middot; 12500 TI Boulevard Dallas, Texas 75243 USA &middot; 972-995-2011
+    </footer>
+    <script src="simpleCart.min.js"></script>
+    <script>
+        simpleCart({
+            checkout: {
+                type: "PayPal",
+                email: "fredesautels@gmail.com"
+            }
+        });
+        simpleCart({
+            taxRate: 0.15
+        });
+        var items = 0;
+        window.onload = function() {
+            if (parseInt(document.getElementById("numItems").textContent) === 0) {
+                document.getElementsByTagName("section")[0].innerHTML = "Your cart is empty!";
+
+            }
+        }
+
+    </script>
+
+</body>
+
+
+
+
+
+</html>
