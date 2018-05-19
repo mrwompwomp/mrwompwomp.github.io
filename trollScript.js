@@ -1,1 +1,1 @@
-window.location.assign("http://www.cemetech.net");
+
