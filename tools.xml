@@ -1,0 +1,17 @@
+<tool>
+    <soft>
+        <image>Images/launch.png</image>
+        <name>Ti-Launchpad</name>
+        <content>LaunchPads are microcontroller development kits from Texas Instruments. They come in a variety of flavors to address your various project needs. All LaunchPad kits include everything you need to begin developing applications in minutes and range from $9.99 to $29.99. That's right - Blink LEDs and spin motors, all for less than $30.</content>
+    </soft>
+    <soft>
+        <image>Images/connect.png</image>
+        <name>Ti-Connect</name>
+        <content>TI Connect™ is computer software that allows for connectivity between a computer and graphing calculator. Transfer data, update your Operating System (OS), download Calculator Software Applications (Apps), and more to your graphing calculator.</content>
+    </soft>
+    <soft>
+        <image>Images/connectCE.png</image>
+        <name>Ti-Connect CE</name>
+        <content>Connect to multiple graphing calculators at once to update your graphing calculator’s Operating System (OS), transfer data, download Calculator Software Applications (apps) and edit and upload programs.Connect to multiple graphing calculators at once to update your graphing calculator’s Operating System (OS), transfer data, download Calculator Software Applications (apps) and edit and upload programs.Create and edit calculator TI Basic programs using the Program Editor workspace. Quickly send programs directly to your connected calculator.</content>
+    </soft>
+</tool>
