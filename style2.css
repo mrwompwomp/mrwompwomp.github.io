@@ -1,0 +1,94 @@
+        body {
+            background-color: gray;
+        }
+
+        h1,
+        h3 {
+            text-align: center;
+            padding-bottom: 1em;
+        }
+
+        .navbar-brand {
+            margin-top: -15px;
+        }
+
+        nav div.container-fluid {
+            background-color: #102052;
+        }
+
+        footer {
+            clear: both;
+            color: #b0b0b0;
+            font-size: .9em;
+            padding: 1em 0.5em;
+        }
+
+        footer div {
+            float: right
+        }
+
+        footer li {
+            float: left;
+            margin: 0 0 0 0.75em;
+            list-style-type: none;
+        }
+
+        footer a {
+            background: url(http://www.ti.com/assets/images/icons/icon_follow-us-facebook.png) no-repeat 0 0;
+            display: block;
+            width: 16px;
+            height: 16px;
+        }
+
+        footer #twitter a {
+            background-image: url(http://www.ti.com/assets/images/icons/icon_follow-us-twitter.png);
+        }
+
+        footer #google a {
+            background-image: url(http://www.ti.com/assets/images/icons/icon_google.png);
+        }
+
+        footer #linkedin a {
+            background-image: url(http://www.ti.com/assets/images/icons/icon_linkedin.png);
+        }
+
+        footer #instagram a {
+            background-image: url(http://www.ti.com/assets/images/icons/icon_follow-us-instagram.png);
+        }
+
+        footer #e2e a {
+            background-image: url(http://www.ti.com/assets/images/icons/e2e_footer.png);
+        }
+
+        footer p {
+            float: left;
+        }
+
+        .instrul {
+            list-style-image: url('Images/bullet.png');
+        }
+
+        #downbutt {
+            color: darkblue
+        }
+
+        table,
+        td,
+        th {
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            padding: 15px;
+        }
+
+        th {
+            text-align: center;
+        }
