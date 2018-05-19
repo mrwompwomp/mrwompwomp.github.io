@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="icon" href="Images/Calculatorfavi.png">
+    <script src="calcsScript.js"></script>
+    <style>
+        @media (min-width: 49rem) {
+            footer#footy {
+                display: none;
+            }
+        }
+
+        @media (max-width: 49rem) {
+            footer#foot {
+                display: none;
+            }
+        }
+
+    </style>
+</head>
+
+<body class="index home">
+    <div id="sidebar">
+        <header>
+            <h1 id="pageTitle"></h1>
+
+            <form class="navbar-form navbar-left" onsubmit="searchfunc();">
+                <div class="form-group">
+                    <input type="text" placeholder="Search" name="search" id="navBarSearchForm" class="form-control" style="float:left;max-width: calc(100% - 3em);">
+                    <button type="submit" class="btn btn-link"><span class="glyphicon glyphicon-search"></span></button>
+                </div>
+
+            </form>
+            <p class="lead">Encourage students to engage in math and science</p>
+        </header>
+        <nav id="sidebar-nav-links">
+
+            <a class="home-link " href="index.html">Home</a>
+            <a class="page-link" href="Products.html">Products </a><span class="glyphicon glyphicon-chevron-down" id="navprody"></span>
+            <section id="navprods" style="display: none;padding-left: 15px;">
+                <a class="page-link " href="TI.html#Ti-84 plus CE" onClick="window.location = '#Ti-84 plus CE'; window.location.reload(true);">Ti-84 plus CE</a><br>
+                <a class="page-link " href="TI.html#Ti-84 plus" onClick="window.location = '#Ti-84 plus'; window.location.reload(true);">Ti-84 plus</a><br>
+                <a class="page-link " href="TI.html#Ti-89 Titanium" onClick="window.location = '#Ti-89 Titanium'; window.location.reload(true);">Ti-89 Titanium</a><br>
+                <a class="page-link " href="TI.html#Ti-nspire CX CAS" onClick="window.location = '#Ti-nspire CX CAS'; window.location.reload(true);">Ti-nspire CX CAS</a><br>
+                <a class="page-link " href="TI.html#Ti-nspire CX" onClick="window.location = '#Ti-nspire CX'; window.location.reload(true);">Ti-nspire CX</a><br>
+                <a class="page-link " href="TI.html#Ti-83 plus" onClick="window.location = '#Ti-83 plus'; window.location.reload(true);">Ti-83 plus</a><br>
+                <a class="page-link " href="TI.html#Ti-73 explorer" onClick="window.location = '#Ti-73 explorer'; window.location.reload(true);">Ti-73 explorer</a>
+            </section>
+            <a class="page-link " href="Tools_Software.html">Software & tools</a><span class="glyphicon glyphicon-chevron-down" id="softnav"></span>
+            <section id="navsofts" style="display: none;padding-left: 15px;">
+                <a class="page-link " href="Ti-launchpad.html">Ti-launchpad</a><br>
+                <a class="page-link " href="Ti-Connect.html">Ti-Connect</a><br>
+                <a class="page-link " href="Ti-Connect_CE.html">Ti-Connect CE</a>
+            </section>
+            <a class="page-link " href="about.html">About us</a>
+            <a class="page-link " href="cart.html">Cart</a>
+
+        </nav>
+        <footer id="foot">
+            <hr>
+            <p>Texas Instruments Incorporated. &middot; 12500 TI Boulevard Dallas, Texas 75243 USA &middot; 972-995-2011
+            </p>
+            <div>
+                <ul>
+                    <li id="facebook"><a href="http://www.ti.com/facebook"></a></li>
+                    <li id="twitter"><a href="http://twitter.com/txinstruments"></a></li>
+                    <li id="linkedin"><a href="http://www.ti.com/linkedin"></a></li>
+                    <li id="instagram"><a href="https://www.instagram.com/txinstruments/"></a></li>
+                    <li id="google"><a href="https://plus.google.com/u/0/104292131839044508100/posts?hl=en"></a></li>
+                    <li id="e2e"><a name="&amp;lid=EN_US_footer_e2e" href="http://e2e.ti.com/"></a></li>
+                </ul>
+            </div>
+            <p>
+                © 2018.
+            </p>
+        </footer>
+
+
+    </div>
+
+    <main class="container">
+        <div class="content">
+
+            <img id="calcimg">
+
+            <p id="overviewP"></p>
+            <h2 id="features">Specifications</h2>
+            <section id="specificationSection">
+            </section>
+
+        </div>
+        <h3>Buy Now!</h3>
+        <div id="addCart">
+        
+        </div>
+    </main>
+    <footer id="footy">
+        <hr>
+        <p>Texas Instruments Incorporated. &middot; 12500 TI Boulevard Dallas, Texas 75243 USA &middot; 972-995-2011
+        </p>
+        <div>
+            <ul>
+                <li id="facebook"><a href="http://www.ti.com/facebook"></a></li>
+                <li id="twitter"><a href="http://twitter.com/txinstruments"></a></li>
+                <li id="linkedin"><a href="http://www.ti.com/linkedin"></a></li>
+                <li id="instagram"><a href="https://www.instagram.com/txinstruments/"></a></li>
+                <li id="google"><a href="https://plus.google.com/u/0/104292131839044508100/posts?hl=en"></a></li>
+                <li id="e2e"><a name="&amp;lid=EN_US_footer_e2e" href="http://e2e.ti.com/"></a></li>
+            </ul>
+        </div>
+        <p>
+            © 2018.
+        </p>
+    </footer>
+
+
+    <script src="calcsScript.js"></script>
+    <script>
+        document.getElementById("navprody").onclick = function() {
+            var x = document.getElementById('navprods');
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+        document.getElementById("softnav").onclick = function() {
+            var x = document.getElementById('navsofts');
+            if (x.style.display === 'none') {
+                x.style.display = 'block';
+            } else {
+                x.style.display = 'none';
+            }
+        }
+
+    </script>
+    <script src="searchingScript.js"></script>
+        <script src="simpleCart.min.js"></script>
+    <script>
+        simpleCart({
+            checkout: {
+                type: "PayPal",
+                email: "fredesautels@gmail.com"
+
+            }
+        });
+        simpleCart({
+            taxRate: 0.06
+        });
+
+    </script>
+</body>
+
+</html>
