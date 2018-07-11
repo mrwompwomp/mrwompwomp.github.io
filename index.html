@@ -175,6 +175,7 @@
 <br>
 <div class="container-fluid" style="margin-bottom:20px;">
     <div class="alert alert-warning error" role="alert">Your Name, Email, Phone number and Address is required.</div>
+    <div class="alert alert-danger error2" role="alert">No email client was found, please send us an email at lindsey@renaultlawncare.com</div>
     <div class="row">
         <div class="col-sm-3" style="padding: 5px;">
             <input type="text" placeholder="Name" id="first_name" name="first_name" class="form-control" autocomplete="off">
@@ -190,8 +191,9 @@
         </div>
     </div>
 </div>
-<a class="btn btn-lg btn-block" id="submit" style="background-color:rgb(33, 150, 243);display: none;color:white;" href="#" >Book this Service</a>
+<a class="btn btn-lg btn-block" id="submit" style="background-color:rgb(33, 150, 243);display: none;color:white;" href="#">Book this Service</a>
 <script>
+    $('.error2').hide();
     var gweedbool = false,
         lweedbool = false,
         bbool = false;
@@ -229,9 +231,10 @@
         bbool = !bbool;
         generateInvoice();
     });
-$("#first_name,#email,#phone,#address").change(function(){
-    generateInvoice();
-});
+    $("#first_name,#email,#phone,#address").change(function() {
+        generateInvoice();
+    });
+
     function generateInvoice() {
         var name = $("#first_name").val(),
             email = $("#email").val(),
@@ -289,6 +292,23 @@ $("#first_name,#email,#phone,#address").change(function(){
         total = total * freqarr[$('button.active').attr('attr-freq')];
         $("#price").text(total.toFixed(2) + "$")
     }
+    $('a[href^=mailto]').each(function() {
+        var href = $(this).attr('href');
+        $(this).click(function() {
+            var t;
+            var self = $(this);
+
+            $(window).blur(function() {
+                // The browser apparently responded, so stop the timeout.
+                clearTimeout(t);
+            });
+
+            t = setTimeout(function() {
+                // The browser did not respond after 500ms, so open an alternative URL.
+$('.error2').show();
+            }, 500);
+        });
+    });
 
 </script>
 <div style="clear: both; display: block;"></div>
