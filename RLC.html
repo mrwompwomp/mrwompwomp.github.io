@@ -1,0 +1,294 @@
+<style>
+    .container {
+        display: block;
+        position: relative;
+        margin-bottom: 20px;
+        cursor: pointer;
+        font-size: 22px;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        margin-left: 20px !important;
+    }
+
+    .container input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    .checkmark {
+        position: absolute;
+        top: 5;
+        left: 0;
+        height: 25px;
+        width: 25px;
+        background-color: #ddd;
+    }
+
+    .container:hover input~.checkmark {
+        background-color: #ccc;
+    }
+
+    .container input:checked~.checkmark {
+        background-color: #2196F3;
+    }
+
+    .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+    }
+
+    .container input:checked~.checkmark:after {
+        display: block;
+    }
+
+    .container .checkmark:after {
+        left: 9px;
+        top: 5px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 3px 3px 0;
+        -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+        transform: rotate(45deg);
+    }
+
+</style>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+
+<script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+<input type="hidden" name="frequency_id" value="1">
+<table class="table" style="margin-top: 15px;">
+    <tbody>
+        <tr>
+            <td style="width: 200px;">
+                <span class="glyphicon glyphicon-question-sign"></span>Size of lawn: <span id="lawnSize">No lawn care</span>
+            </td>
+            <td>
+                <div class="slidecontainer">
+                    <input type="range" list="tickmarks" min="0" max="80" step="20" value="0" name="lawnSize" autocomplete="off">
+                    <datalist id="tickmarks">
+  <option value="0" data-size="No lawn care">
+  <option value="20" data-size="xsmall">
+  <option value="40" data-size="small">
+  <option value="60" data-size="medium">
+  <option value="80" data-size="large">
+</datalist>
+                </div>
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 150px;">
+                Obstacles: <span id="numObstacles">0-5</span>
+            </td>
+            <td>
+                <div class="slidecontainer">
+                    <input type="range" list="tickmarks" min="0" max="60" step="20" value="0" name="numObstacles" autocomplete="off">
+
+                    <datalist id="tickmarks">
+  <option value="0" data-size="0-5">
+  <option value="20" data-size="6-10">
+  <option value="40" data-size="11-15">
+  <option value="60" data-size="16+">
+</datalist>
+                </div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+
+<table class="table" style="margin-top:">
+    <tbody>
+        <tr>
+            <td style="width: 300px;">
+                <label class="container">&nbsp;&nbsp;&nbsp;Bagged Grass
+  <input type="checkbox" name="baggedGrass" autocomplete="off">
+  <span class="checkmark"></span>
+</label>
+            </td>
+            <td></td>
+        </tr>
+        <tr>
+            <td style="width: 200px;">
+                <label class="container">&nbsp;&nbsp;&nbsp;Lawn Weeding
+                <input type="checkbox" name="lawnweeding" autocomplete="off">
+                <span class="checkmark"></span>
+                </label>
+            </td>
+            <td id="lawnweed" style="visibility:hidden;">Number of Hours (between 1 and 5):
+                <input type="number" min="0" max="5" id="lawnweedc" value="0" name="lawnweedc" autocomplete="off">
+            </td>
+        </tr>
+
+        <tr>
+            <td style="width: 200px;">
+                <label class="container">&nbsp;&nbsp;&nbsp;Garden Weeding
+  <input type="checkbox" name="gardenweeding" autocomplete="off">
+  <span class="checkmark"></span>
+</label>
+            </td>
+            <td>
+                <div id="gardenweed" style="visibility:hidden;">Number of Hours (between 1 and 5):
+                    <input type="number" min="0" max="5" id="gardenweedc" value="0" name="gardenweedc" autocomplete="off"></div>
+            </td>
+        </tr>
+    </tbody>
+</table>
+<div class="container-fluid" style="margin-bottom: 20px;">
+    <div class="row">
+
+        <div class="col">
+            <div style="text-align: center;">
+                <button class="btn btn-default" attr-freq="0" style="width: 100%; height: 50px;">Single service</button>
+
+            </div>
+        </div>
+        <div class="col">
+            <div style="text-align: center;">
+                <button class="btn btn-default" style="width: 100%; height: 50px;" attr-freq="1">Monthly service</button>
+                <br>5% off
+            </div>
+        </div>
+        <div class="col">
+            <div style="text-align: center;">
+                <button class="active btn btn-default" style="width: 100%; height: 50px;background-color:rgb(33, 150, 243);" attr-freq="2">Bi-weekly service</button>
+                <br>10% off
+            </div>
+        </div>
+
+        <div class="col">
+            <div style="text-align: center;">
+                <button class="btn btn-default" style="width: 100%; height: 50px;" attr-freq="3">Weekly service</button>
+                <br>15% off
+            </div>
+        </div>
+    </div>
+</div>
+<div style="text-align:center;">
+    <h3>total</h3>
+    <span id="price">0.00$</span>
+</div>
+<br>
+<div class="container-fluid" style="margin-bottom:20px;">
+    <div class="alert alert-warning error" role="alert">Your Name, Email, Phone number and Address is required.</div>
+    <div class="row">
+        <div class="col-sm-3" style="padding: 5px;">
+            <input type="text" placeholder="Name" id="first_name" name="first_name" class="form-control" autocomplete="off">
+        </div>
+        <div class="col-sm-3" style="padding: 5px;">
+            <input type="email" placeholder="Email" id="email" class="form-control" autocomplete="off">
+        </div>
+        <div class="col-sm-3" style="padding: 5px;">
+            <input type="text" placeholder="Phone" id="phone" class="form-control" autocomplete="off">
+        </div>
+        <div class="col-sm-3" style="padding: 5px;">
+            <input type="text" placeholder="Address" id="address" class="form-control" autocomplete="off">
+        </div>
+    </div>
+</div>
+<a class="btn btn-lg btn-block" id="submit" style="background-color:rgb(33, 150, 243);display: none;color:white;" href="#" >Book this Service</a>
+<script>
+    var gweedbool = false,
+        lweedbool = false,
+        bbool = false;
+    $('[name="lawnSize"], [name="numObstacles"]').change(function() {
+        var sizenum = $('[name="lawnSize"]').val();
+        var sizes = ['No lawn care', 'xsmall', 'small', 'medium', 'large'];
+        $('#lawnSize').text(sizes[sizenum / 20]);
+        obsnum = $('[name="numObstacles"]').val();
+        var obstaclesarr = ['0-5', '6-10', '11-15', '16+'];
+        $('#numObstacles').text(obstaclesarr[obsnum / 20]);
+        updatePrice();
+        generateInvoice();
+    });
+    $('[name="gardenweeding"]').change(function() {
+        gweedbool = !gweedbool;
+        if (gweedbool == true) {
+            $("#gardenweed").css("visibility", "visible");
+        } else {
+            $("#gardenweed").css("visibility", "hidden");
+        }
+        updatePrice();
+        generateInvoice();
+    });
+    $('[name="lawnweeding"]').change(function() {
+        lweedbool = !lweedbool;
+        if (lweedbool == true) {
+            $("#lawnweed").css("visibility", "visible");
+        } else {
+            $("#lawnweed").css("visibility", "hidden");
+        }
+        updatePrice();
+        generateInvoice();
+    });
+    $('[name="baggedGrass"]').change(function() {
+        bbool = !bbool;
+        generateInvoice();
+    });
+$("#first_name,#email,#phone,#address").change(function(){
+    generateInvoice();
+});
+    function generateInvoice() {
+        var name = $("#first_name").val(),
+            email = $("#email").val(),
+            phone = $("#phone").val(),
+            address = $("#address").val();
+        if (name != "" && email != "" && phone != "" && address != "") {
+            $('.error').fadeOut();
+            if ($('[name="baggedGrass"]').is(':checked')) {
+                bagged = "Yes";
+            } else {
+                bagged = "No";
+            }
+            if ($('[name="lawnweeding"]').is(':checked')) {
+                weeding = "Yes, " + $("#lawnweedc").val() + " Hour(s)";
+            } else {
+                weeding = "No";
+            }
+            if ($('[name="gardenweeding"]').is(':checked')) {
+                Gweeding = "Yes, " + $("#gardenweedc").val() + " Hour(s)";
+            } else {
+                Gweeding = "No";
+            }
+            s = "mailto:lindsey@renaultlawncare.com?Subject=Service Booking&body=Size of Lawn: " + $("#lawnSize").text() + "%0D%0AObstacles: " + $("#numObstacles").text() + "%0D%0ABagged Grass: " + bagged + "%0D%0ALawn Weeding: " + weeding + "%0D%0AGarden Weeding: " + Gweeding + "%0D%0AFrequency: " + $('[attr-freq].active').text() + "%0D%0ATotal: " + $("#price").text() + "%0D%0A%0D%0AName: " + name + "%0D%0AEmail: " + email + "%0D%0APhone: " + phone + "%0D%0AAddress: " + address;
+            $("#submit").attr("href", s);
+            $("#submit").css("display", "block");
+        }
+    }
+    $('[attr-freq]').click(function() {
+        $('[attr-freq]').removeClass('active');
+        $('[attr-freq]').css("background-color", "white");
+        $(this).addClass('active');
+        $(this).css("background-color", "rgb(33, 150, 243)");
+        var frequency_id = $(this).attr('attr-freq');
+        updatePrice();
+        generateInvoice();
+    });
+    $('[name="lawnweedc"], [name="gardenweedc"]').change(function() {
+        updatePrice();
+        generateInvoice();
+    });
+
+    function updatePrice() {
+        var total = 0;
+        var sizePrices = [0, 15, 25, 35, 45];
+        total = total + sizePrices[($('[name="lawnSize"]').val() / 20)];
+        obstaclePrices = [0, 5, 10, 15];
+        total = total + obstaclePrices[$('[name="numObstacles"]').val() / 20];
+        if (lweedbool) {
+            total = total + $("#lawnweedc").val() * 35;
+        }
+        if (gweedbool) {
+            total = total + $("#gardenweedc").val() * 35;
+        }
+        freqarr = [1, 0.95, 0.9, 0.85];
+        total = total * freqarr[$('button.active').attr('attr-freq')];
+        $("#price").text(total.toFixed(2) + "$")
+    }
+
+</script>
+<div style="clear: both; display: block;"></div>
