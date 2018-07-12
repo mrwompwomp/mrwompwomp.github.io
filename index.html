@@ -300,15 +300,26 @@
         total = total * freqarr[$('button.active').attr('attr-freq')];
         $("#price").text(total.toFixed(2) + "$")
     }
+(function($)) {
     $("#submit").click(function(){
-var window_focus;
 
-$(window).focus(function() {
-    window_focus = true;
-}).blur(function() {
-    window_focus = false;
-});
-        window.alert(window_focus);
+    var href = $("#submit").attr('href');
+    $("#submit").click(function() {
+      var t;
+      var self = $("#submit");
+
+      $(window).blur(function() {
+        // The browser apparently responded, so stop the timeout.
+        clearTimeout(t);
+      });
+
+      t = setTimeout(function() {
+        // The browser did not respond after 500ms, so open an alternative URL.
+        document.location.href = 'https://www.google.com/';
+      }, 500);
+    });
+  });
+})(jQuery);
 });
 
 </script>
