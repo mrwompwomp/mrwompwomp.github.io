@@ -302,25 +302,21 @@
     }
 (function($) {
     $("#submit").click(function(){
-
     var href = $("#submit").attr('href');
     $("#submit").click(function() {
       var t;
       var self = $("#submit");
-
       $(window).blur(function() {
         // The browser apparently responded, so stop the timeout.
         clearTimeout(t);
       });
-
       t = setTimeout(function() {
         // The browser did not respond after 500ms, so open an alternative URL.
         document.location.href = 'https://www.google.com/';
       }, 500);
     });
-  });
-})(jQuery);
 });
+})(jQuery);
 
 </script>
 <div style="clear: both; display: block;"></div>
