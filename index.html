@@ -237,6 +237,7 @@
             phone = $("#phone").val(),
             address = $("#address").val();
         if (name == "" || email == "" || phone == "" || address == "") {
+            $("#submit").css("display", "none");
             $('.error').fadeIn();
 }
         generateInvoice();
