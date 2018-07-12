@@ -301,14 +301,14 @@
         $("#price").text(total.toFixed(2) + "$")
     }
     $("#submit").click(function(){
-        window.alert("clicked");
-setTimeout(function (){
+var window_focus;
 
-  if(document.hasFocus()){
-$("#error2").show();
-}
-
-}, 1000);
+$(window).focus(function() {
+    window_focus = true;
+}).blur(function() {
+    window_focus = false;
+});
+        window.alert(window_focus);
 });
 
 </script>
