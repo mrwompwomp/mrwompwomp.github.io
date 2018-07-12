@@ -301,10 +301,9 @@
         $("#price").text(total.toFixed(2) + "$")
     }
 (function($) {
-    $("#submit").click(function(){
-        window.alert("handling");
     var href = $("#submit").attr('href');
     $("#submit").click(function() {
+	window.alert("handling");
       var t;
       var self = $("#submit");
       $(window).blur(function() {
@@ -316,8 +315,8 @@
         document.location.href = 'https://www.google.com/';
       }, 500);
     });
-});
 })(jQuery);
+
 
 </script>
 <div style="clear: both; display: block;"></div>
