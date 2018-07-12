@@ -303,12 +303,12 @@
 (function($) {
     var href = $("#submit").attr('href');
     $("#submit").click(function() {
-	window.alert("handling");
       var t;
       var self = $("#submit");
       $(window).blur(function() {
         // The browser apparently responded, so stop the timeout.
         clearTimeout(t);
+		window.alert("handled");
       });
       t = setTimeout(function() {
         // The browser did not respond after 500ms, so open an alternative URL.
@@ -316,6 +316,7 @@
       }, 500);
     });
 })(jQuery);
+
 
 
 </script>
