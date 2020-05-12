@@ -76,7 +76,7 @@
 <body>
 <header>
     <ul class="header__meta bg-dark">
-        <li><a href="index.php"><img src="Images/f-logo.png" alt="f-logo"></a></li>
+        <li><a href="index.html"><img src="Images/f-logo.png" alt="f-logo"></a></li>
         <li><a href="Projects.php" class="text-white nounderline">Projects</a></li>
         <li><a href="hobbies.php" class="text-white nounderline">Hobbies</a></li>
         <li><a href="contact.php" class="text-white nounderline">Contact</a></li>

@@ -284,7 +284,7 @@
 <body style="background-color: #212529;">
 <header>
     <ul class="header__meta">
-        <li><a href="index.php"><img src="Images/f-logo.png" alt="f-logo" style="margin-bottom: -8px"></a></li>
+        <li><a href="index.html"><img src="Images/f-logo.png" alt="f-logo" style="margin-bottom: -8px"></a></li>
         <li><a href="Projects.php">Projects</a></li>
         <li><a href="hobbies.php">Hobbies</a></li>
         <li><a href="contact.php">Contact</a></li>
