@@ -1,0 +1,246 @@
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,900" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="CSS/Style.css"/>
+    <meta content="width=device-width, initial-scale=1" name="viewport"/>
+    <link rel="icon" type="image/png" href="Images/f-logo.png">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"
+            integrity="sha384-6khuMg9gaYr5AxOqhkVIODVIvm9ynTT5J4V1cfthmT+emCG6yVmEZsRHdxlotUnm"
+            crossorigin="anonymous"></script>
+    <title>Frederic Desautels</title>
+    <style>
+        body {
+            background-color: #212529;
+        }
+
+        .nounderline {
+            width: 50%;
+            text-decoration: none !important
+        }
+
+        .carousel-image {
+            max-width: 350px;
+            margin-left: 10%;
+        }
+
+        .carousel-text {
+            width: 40%;
+            margin-right: 15%;
+        }
+
+        .split-buttons {
+            display: none;
+        }
+
+        @media screen and (max-width: 1000px) {
+            .carousel-image {
+                max-width: 300px;
+            }
+
+            .carousel-text {
+                margin-right: 10%;
+            }
+        }
+
+        @media screen and (max-width: 750px) {
+            .carousel-text {
+                margin-right: 10%;
+            }
+
+            .carousel-image {
+                max-width: 280px;
+                margin-left: 10%;
+            }
+        }
+
+        @media screen and (max-width: 714px) {
+            .carousel-image {
+                width: 80%;
+                max-width: 100%;
+            }
+
+            .carousel-text {
+                width: 80%;
+                height: 93%;
+            }
+
+            .split-buttons {
+                display: block;
+            }
+        }
+
+    </style>
+</head>
+<body>
+<header>
+    <ul class="header__meta bg-dark">
+        <li><a href="index.html"><img src="Images/f-logo.png" alt="f-logo"></a></li>
+        <li><a href="Projects.html" class="text-white nounderline">Projects</a></li>
+        <li><a href="hobbies.html" class="text-white nounderline">Hobbies</a></li>
+        <li><a href="contact.html" class="text-white nounderline">Contact</a></li>
+    </ul>
+</header>
+<div id="carousel-2" class="carousel slide carousel-fade" data-ride="carousel">
+    <div class="carousel-inner w-100" role="listbox">
+        <div class="carousel-item active">
+            <div class="view">
+                <img class="d-block float-left carousel-image"
+                     src="Images/Pegs.gif"
+                     alt="First slide">
+                <div class="text-white float-right carousel-text text-justify">
+                    <p>A port of the ancient game "peg solitaire" for the TI-84 Plus CSE. This game is written in
+                        TI-Basic and makes use of the xLIBc and Celtic II libraries. The objective of the game is to
+                        clear all pegs from the board. Pegs can only move by jumping over another peg into an empty
+                        slot. When a peg is jumped over by another peg, it is removed from the board.</p>
+                </div>
+                <div class="mask rgba-black-light"></div>
+            </div>
+            <div class="w-100 text-white position-fixed text-center bottom-section">
+                <section>
+                    <a class="button button--primary button--github bubbly-button"
+                       href="https://github.com/mrwompwomp/Pegs/blob/master/PEGS.src">
+                        <div class="button__icon"></div>
+                        <div class="button__text">
+                            <span class="button__action">View</span>
+                            <span class="button__kind">Source Code</span>
+                        </div>
+                    </a>
+                    <div class="split-buttons"><br></div>
+                    <a class="button button--download button--secondary bubbly-button"
+                       href="https://www.cemetech.net/downloads/files/x1552/download">
+                        <div class="button__icon"></div>
+                        <div class="button__text">
+                            <span class="button__action">Direct</span>
+                            <span class="button__kind">Download</span>
+                        </div>
+                    </a>
+                </section>
+                <h3 class="h3-responsive">Pegs CSE</h3>
+                <p>For the TI-84 Plus C Silver Edition</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="view">
+                <img class="d-block float-left carousel-image"
+                     src="Images/blockParty_1.gif"
+                     alt="First slide">
+                <div class="text-white float-right carousel-text text-justify">
+                    <p>A port of the game "Block Party" for the TI-84 Plus CSE. Block party is essentially the same as
+                        the popular game 1010!, but played on an 8x8 grid. This game is written in TI-Basic and makes
+                        use of the xLIBc and Celtic II libraries.</p>
+                </div>
+                <div class="mask rgba-black-light"></div>
+            </div>
+            <div class="w-100 text-white position-fixed text-center bottom-section">
+                <section>
+                    <a class="button button--primary button--github bubbly-button"
+                       href="https://github.com/mrwompwomp/BLOCKS/blob/master/BLOCKS.src">
+                        <div class="button__icon"></div>
+                        <div class="button__text">
+                            <span class="button__action">View</span>
+                            <span class="button__kind">Source Code</span>
+                        </div>
+                    </a>
+                    <div class="split-buttons"><br></div>
+                    <a class="button button--secondary button--download bubbly-button"
+                       href="https://www.cemetech.net/downloads/files/x1728/download" target="_blank">
+                        <div class="button__icon"></div>
+                        <div class="button__text">
+                            <span class="button__action">Direct</span>
+                            <span class="button__kind">Download</span>
+                        </div>
+                    </a>
+                </section>
+                <h3 class="h3-responsive">Block Party CSE</h3>
+                <p>For the TI-84 Plus C Silver Edition</p>
+            </div>
+        </div>
+        <div class="carousel-item">
+            <div class="view">
+                <img class="d-block float-left carousel-image"
+                     src="Images/TXTSPRTS.gif"
+                     alt="Third slide">
+                <div class="text-white float-right carousel-text text-justify">
+                    <p> The monochrome Z80 series of TI calculators do not have any built-in
+                        functionality to draw sprites. By printing text on top of other text as well as saving and
+                        recalling the graph screen, it is possible to draw arbitrary sprites. This program provides an
+                        interface for users to draw and export their creations as <a
+                                href="http://tibasicdev.wikidot.com/textsprites">horizontal text sprites</a> which can
+                        be embedded in a monochrome TI-Basic program.</p>
+                </div>
+                <div class="mask rgba-black-slight"></div>
+            </div>
+            <div class="w-100 text-white position-fixed text-center bottom-section">
+                <section>
+                    <a class="button button--primary button--github bubbly-button"
+                       href="https://github.com/mrwompwomp/TextSpriteGenerator/blob/master/TXTSPRTS.src">
+                        <div class="button__icon"></div>
+                        <div class="button__text">
+                            <span class="button__action">View</span>
+                            <span class="button__kind">Source Code</span>
+                        </div>
+                    </a>
+                    <div class="split-buttons"><br></div>
+                    <a class="button button--secondary button--download bubbly-button"
+                       href="https://www.cemetech.net/downloads/files/x1341/download" target="_blank">
+                        <div class="button__icon"></div>
+                        <div class="button__text">
+                            <span class="button__action">Direct</span>
+                            <span class="button__kind">Download</span>
+                        </div>
+                    </a>
+                </section>
+                <h3 class="h3-responsive">Text-Sprite Generator</h3>
+                <p>For the TI-84 Plus and TI-83 Plus</p>
+            </div>
+        </div>
+    </div>
+    <a class="carousel-control-prev" href="#carousel-2" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carousel-2" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+<canvas style="z-index: -1;position:fixed; top:0;left:0; opacity: 0.5"></canvas>
+<script>
+    var canvas = document.querySelector('canvas'),
+        ctx = canvas.getContext('2d');
+    canvas.width = window.innerWidth;
+    canvas.height = window.innerHeight;
+    var letters = 'ABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZABCDEFGHIJKLMNOPQRSTUVXYZ';
+    letters = letters.split('');
+
+    var fontSize = 10,
+        columns = canvas.width / fontSize;
+
+    var drops = [];
+    for (var i = 0; i < columns; i++) {
+        drops[i] = 1;
+    }
+
+    function draw() {
+        ctx.fillStyle = 'rgba(0, 0, 0, 0.02)';
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+        for (var i = 0; i < drops.length; i++) {
+            var text = letters[Math.floor(Math.random() * letters.length)];
+            ctx.fillStyle = '#30A0FF';
+            ctx.fillText(text, i * fontSize, drops[i] * fontSize);
+            drops[i]++;
+        }
+    }
+
+    var matrixAnimation = setInterval(draw, 30);
+
+    function stopMatrix() {
+        clearInterval(matrixAnimation);
+    }
+
+    setTimeout(stopMatrix, 2500);
+</script>
+<script src="scripts.js"></script>
+</body>
